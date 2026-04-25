@@ -154,6 +154,15 @@
       .siblings-inner .sep {
         color: var(--border-strong);
       }
+      @media (max-width: 560px) {
+        .siblings-inner {
+          gap: 6px 14px;
+          justify-content: center;
+        }
+        .siblings-inner .sep {
+          display: none;
+        }
+      }
 
       nav.top {
         display: flex;
@@ -908,12 +917,7 @@
       <div class="wrap footer-inner">
         <div>hodl · MIT · built in Rust</div>
         <div>
-          <a href="https://github.com/kryptic-sh/hodl">github</a> ·
-          <a href="https://www.kryptic.sh/">kryptic.sh</a> ·
-          <a href="https://sqeel.kryptic.sh/">sqeel</a> ·
-          <a href="https://buffr.kryptic.sh/">buffr</a> ·
-          <a href="https://hjkl.kryptic.sh/">hjkl</a> ·
-          <a href="https://inbx.kryptic.sh/">inbx</a>
+          <a href="https://github.com/kryptic-sh/hodl">github</a>
         </div>
       </div>
     </footer>
