@@ -49,6 +49,32 @@
         }
       }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script>
+      (function () {
+        var loaded = false;
+        function loadGA() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1CWEH6CWX8';
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-1CWEH6CWX8');
+        }
+        ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(
+          function (e) {
+            window.addEventListener(e, loadGA, { once: true, passive: true });
+          }
+        );
+        setTimeout(loadGA, 8000);
+      })();
+    </script>
     <style>
       :root {
         --bg: #0b0d10;
